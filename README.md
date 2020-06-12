@@ -1,4 +1,4 @@
-# timeo
+# Timeo
 
 > A time tracking application to record your time taken to perform your daily tasks
 

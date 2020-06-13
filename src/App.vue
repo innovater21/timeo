@@ -3,7 +3,7 @@
     <Navbar></Navbar>
     <div class="main__wrapper">
       <Projects></Projects>
-      <div>
+      <div style="padding:0 20px">
         <Tracker @stop-time="addNewTask"></Tracker>
         <TaskList :tasks="tasks"></TaskList>
       </div>
@@ -110,20 +110,16 @@ a {
 }
 .main__wrapper {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 220px 4fr;
 }
 .neumorphic {
   background: #f2f3f7;
-  border-radius: 40px;
+  border-radius: 15px;
   box-shadow: -2px -2px 4px 0px #ffffff, 3px 4px 10px 0px rgba(0, 0, 0, .25);
 }
 *::-webkit-scrollbar {
   width: 5px;
 }
-/* body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-} */
 *::-webkit-scrollbar-track {
   background: #CFD8DC;
 }

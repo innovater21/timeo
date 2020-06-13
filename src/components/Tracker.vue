@@ -1,9 +1,9 @@
 <template>
     <div class="tracker neumorphic">
-        <input type="text" v-model="taskName" />
-        <div>{{ hour }} : {{ minutes }} : {{ seconds }}</div>
-        <button @click="startTimer">Start Timer</button>
-        <button @click="stopTimer">Stop Timer</button>
+        <input style="height:40px;border:1px solid #ccc;border-radius:15px;padding:10px" type="text" v-model="taskName" placeholder="Enter task description" />
+        <div class="counter">{{ hour }} : {{ minutes }} : {{ seconds }}</div>
+        <button class="button_class play" @click="startTimer"><img src="https://img.icons8.com/flat_round/64/000000/play--v1.png"/></button>
+        <button class="button_class stop" @click="stopTimer"><img src="https://img.icons8.com/flat_round/64/000000/stop.png"/></button>
     </div>
 </template>
 
@@ -60,5 +60,25 @@ export default {
 <style>
     .projects__wrapper {
         max-width: 250px;
+    }
+    .tracker {
+      display: grid;
+      grid-template-columns: 1fr 1fr 80px 80px;
+      height: 100px;
+      padding: 10px;
+      align-items: center;
+    }
+    .button_class {
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+    }
+    .counter {
+      font-weight: bolder;
+      line-height: 40px;
+      font-size: 35px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
     }
 </style>

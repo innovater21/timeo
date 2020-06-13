@@ -1,6 +1,6 @@
 <template>
   <div class="projects__wrapper neumorphic">
-      <div v-for="project in projects" :key="project.id">
+      <div class="project__element" v-for="project in projects" :key="project.id">
           {{ project.name }}
       </div>
   </div>
@@ -62,6 +62,13 @@ export default {
 
 <style>
     .projects__wrapper {
-        max-width: 250px;
+        max-width: 180px;
+        padding: 20px;
+        text-align: left;
+        max-height: 400px;
+    }
+    .project__element {
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
     }
 </style>
